@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="scripts/test_script.js" defer></script>
+		<title>Document</title>
+	</head>
+	<style>
+		:root {
+			--dotnav-inc: 0;
+			--dotnav-width: 56px;
+			--dotnav-index: 0;
+		}
+
+		.wrapper {
+			display: flex;
+		}
+		.container {
+			height: 56px;
+			display: flex;
+			padding: 0 16px;
+			border-radius: 32px;
+			box-sizing: border-box;
+			align-items: center;
+			background-color: lightcyan;
+		}
+		.dotnav-items {
+			margin: 0;
+			padding: 0;
+			display: inline-flex;
+			justify-content: center;
+			gap: 8px;
+		}
+		.dotnav-item {
+			list-style: none;
+			width: var(--dotnav-width);
+			height: 8px;
+			background-color: aqua;
+			border-radius: 999px;
+			transition: width 1000ms ease, transform 400ms ease;
+			overflow: hidden;
+		}
+
+		.dotnav-item::after {
+			display: block;
+			content: "";
+			transform: translateX(var(--dotnav-inc));
+			/* transform: translateX(-50%); */
+			height: 8px;
+			background: #000;
+			border-radius: 999px;
+		}
+	</style>
+	<body>
+		<div class="wrapper">
+			<main class="container">
+				<ul class="dotnav-items">
+					<li class="dotnav-item"></li>
+					<li class="dotnav-item"></li>
+					<li class="dotnav-item"></li>
+					<li class="dotnav-item"></li>
+				</ul>
+			</main>
+		</div>
+		<button class="button">Toggle</button>
+	</body>
+</html>
