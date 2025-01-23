@@ -1,1 +1,11 @@
-Log will be written here.
+## Study
+
+---
+
+### Subject
+
+Apple | Mac Mini.
+
+---
+
+### Log
