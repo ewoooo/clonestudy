@@ -77,13 +77,21 @@ body {
 	letter-spacing: 0.05rem;
 }
 
+.typography-media-card-gallery-headline {
+	line-height: 1.3;
+	font-size: 24px;
+	font-weight: 600;
+	letter-spacing: 0.01rem;
+}
+
 .footnote {
-	/* top: auto; */
+	top: auto;
+	position: relative;
 	vertical-align: initial;
 	text-underline-offset: -0.3rem;
 	font-feature-settings: "numr";
 	position: relative;
-	font-size: 1rem;
+	font-size: 1em;
 }
 
 .banner-card-active-area {
@@ -127,4 +135,16 @@ body {
 	&:hover {
 		transform: scale(1.006);
 	}
+}
+
+.tile-rounded {
+	--border-radius-medium: 28px;
+	border-radius: var(--border-radius-medium);
+	isolation: isolate;
+}
+
+.pin-bottom-center {
+	align-items: flex-end;
+	justify-content: center;
+	text-align: center;
 }
