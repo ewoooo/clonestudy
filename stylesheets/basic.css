@@ -148,3 +148,7 @@ body {
 	justify-content: center;
 	text-align: center;
 }
+
+.slide-snap-control {
+	scroll-snap-type: x mandatory;
+}

@@ -5,8 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="stylesheets/reset.css" />
 		<link rel="stylesheet" href="stylesheets/basic.css" />
+		<link rel="stylesheet" href="stylesheets/animation.css" />
 		<link rel="stylesheet" href="stylesheets/style.css" />
-		<script src="scripts/script.js" defer></script>
+		<script src="scripts/dotnav.js" defer></script>
+		<script src="scripts/slider.js" defer></script>
+		<script src="scripts/observer.js" defer></script>
 		<title>Apple | Mac Mini</title>
 	</head>
 	<body>
@@ -198,15 +201,27 @@
 				<div class="media-card-gallery">
 					<div class="media-controller-wrapper">
 						<div class="access__controller">
-							<div class="controller-play-pause controller__background">d</div>
-							<div class="controller-nav controller__background">
-								<div class="dotnav-wrapper">
-									<ul class="dotnav-items">
-										<li class="dotnav-item"></li>
-										<li class="dotnav-item"></li>
-										<li class="dotnav-item"></li>
-										<li class="dotnav-item"></li>
-									</ul>
+							<div class="controller-container">
+								<div class="controller-play-pause controller__background">
+									<button class="button-play-pause controller__child" style="--x: 35px">
+										<svg width="13" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M12.4145 6.89621C13.1952 7.38931 13.1952 8.61069 12.4145 9.10379L1.77482 15.824C0.988053 16.3209 -2.74737e-07 15.7065 -2.31627e-07 14.7202L3.55873e-07 1.27978C3.98983e-07 0.293543 0.988055 -0.320942 1.77482 0.175996L12.4145 6.89621Z"
+												fill="rgba(0,0,0,0.5)" />
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="controller-container">
+								<div class="controller-nav controller__background">
+									<div class="dotnav-wrapper controller__child" style="--x: -35px">
+										<ul class="dotnav-items">
+											<li class="dotnav-item"></li>
+											<li class="dotnav-item"></li>
+											<li class="dotnav-item"></li>
+											<li class="dotnav-item"></li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -275,7 +290,7 @@
 										<p class="caption typography-media-card-gallery-headline">
 											Apple Intelligence를 위한 탄생
 											<br />
-											보다 밀접하게, 보다 안전하게, 보다 강력하게.<sub class="footnote"><a href="#">1</a></sub
+											보다 밀접하게, 보다 안전하게, 보다 강력하게.<sub class="footnote"><a href="#">1</a></sub>
 										</p>
 									</div>
 									<figure class="media-container pin-center">
@@ -298,6 +313,93 @@
 					<!-- Gallery-Contents -->
 				</div>
 				<!-- Gallery -->
+			</section>
+			<!-- Section-Highlight -->
+			<section class="section section-closer-look">
+				<div class="viewport-content">
+					<header class="section-header">
+						<h2 class="section-header-headline">디테일 살펴보기.</h2>
+					</header>
+				</div>
+				<div class="slide-gallery-container">
+					<div class="slide-gallery-scroll slide-snap-control">
+						<ul class="slide-gallery-items">
+							<li class="slide-gallery-item">
+								<picture class="item-bento tile-rounded">
+									<source media="(max-width: 1068px)" srcset="src/imgs/closerLook_1_medium.jpg" />
+									<source media="(max-width: 1440px)" srcset="src/imgs/closerLook_1_large.jpg" />
+									<img src="src/imgs/closerLook_1_xlarge.jpg" />
+								</picture>
+							</li>
+							<!-- item -->
+							<li class="slide-gallery-item">
+								<div class="slide-gallery-bento" style="grid-template: 100% / 0.33fr 0.67fr">
+									<picture class="item-bento tile-rounded">
+										<source media="(max-width: 1068px)" srcset="src/imgs/closerLook_2_1_medium.jpg" />
+										<source media="(max-width: 1440px)" srcset="src/imgs/closerLook_2_1_large.jpg" />
+										<img src="src/imgs/closerLook_2_1_xlarge.jpg" />
+									</picture>
+									<picture class="item-bento tile-rounded">
+										<source media="(max-width: 1068px)" srcset="src/imgs/closerLook_2_2_medium.jpg" />
+										<source media="(max-width: 1440px)" srcset="src/imgs/closerLook_2_2_large.jpg" />
+										<img src="src/imgs/closerLook_2_2_xlarge.jpg" />
+									</picture>
+								</div>
+							</li>
+							<!-- item -->
+							<li class="slide-gallery-item">
+								<div class="slide-gallery-bento" style="grid-template: 100% / 0.67fr 0.33fr">
+									<picture class="item-bento tile-rounded">
+										<source media="(max-width: 1068px)" srcset="src/imgs/closerLook_3_1_medium.jpg" />
+										<source media="(max-width: 1440px)" srcset="src/imgs/closerLook_3_1_large.jpg" />
+										<img src="src/imgs/closerLook_3_1_xlarge.jpg" />
+									</picture>
+									<picture class="item-bento tile-rounded">
+										<source media="(max-width: 1068px)" srcset="src/imgs/closerLook_3_2_medium.jpg" />
+										<source media="(max-width: 1440px)" srcset="src/imgs/closerLook_3_2_large.jpg" />
+										<img src="src/imgs/closerLook_3_2_xlarge.jpg" />
+									</picture>
+								</div>
+							</li>
+							<!-- item -->
+							<li class="slide-gallery-item">
+								<picture class="item-bento tile-rounded">
+									<source media="(max-width: 1068px)" srcset="src/imgs/closerLook_4_medium.jpg" />
+									<source media="(max-width: 1440px)" srcset="src/imgs/closerLook_4_large.jpg" />
+									<img src="src/imgs/closerLook_4_xlarge.jpg" />
+								</picture>
+							</li>
+							<!-- item -->
+						</ul>
+					</div>
+					<div class="slide-gallery-paddlenav">
+						<ul class="paddles">
+							<li class="paddle-left">
+								<button class="button paddle-button button-disabled">
+									<svg width="12" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M11.5694 0.772203C10.8764 -0.0996826 9.59224 -0.25675 8.70123 0.421383L3.65239 4.26394C3.6182 4.28996 3.58407 4.31593 3.55001 4.34183C2.68426 5.00051 1.86774 5.62172 1.28668 6.21283C0.645749 6.86485 0 7.76529 0 9C0 10.2347 0.64575 11.1352 1.28668 11.7872C1.86775 12.3783 2.68427 12.9995 3.55002 13.6582C3.58407 13.6841 3.6182 13.71 3.65239 13.7361L8.70123 17.5786C9.59224 18.2567 10.8764 18.0997 11.5694 17.2278C12.2624 16.3559 12.1019 15.0994 11.2109 14.4212L6.16202 10.5787C5.15665 9.81353 4.58325 9.3708 4.23272 9.01422C4.22798 9.0094 4.22335 9.00466 4.21883 9C4.22335 8.99534 4.22798 8.9906 4.23272 8.98578C4.58325 8.6292 5.15665 8.18647 6.16201 7.42131L11.2109 3.57876C12.1019 2.90063 12.2624 1.64409 11.5694 0.772203Z"
+											fill="rgba(0, 0, 0, 0.4)" />
+									</svg>
+								</button>
+							</li>
+							<li class="paddle-right">
+								<button class="button paddle-button">
+									<svg width="12" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M0.43063 0.772203C1.12364 -0.0996826 2.40776 -0.25675 3.29877 0.421383L8.34761 4.26394C8.3818 4.28996 8.41593 4.31593 8.44999 4.34183C9.31574 5.00051 10.1323 5.62172 10.7133 6.21283C11.3543 6.86485 12 7.76529 12 9C12 10.2347 11.3543 11.1352 10.7133 11.7872C10.1323 12.3783 9.31573 12.9995 8.44998 13.6582C8.41593 13.6841 8.3818 13.71 8.34761 13.7361L3.29877 17.5786C2.40776 18.2567 1.12364 18.0997 0.43063 17.2278C-0.262384 16.3559 -0.10187 15.0994 0.789148 14.4212L5.83798 10.5787C6.84335 9.81353 7.41675 9.3708 7.76728 9.01422C7.77202 9.0094 7.77665 9.00466 7.78117 9C7.77665 8.99534 7.77202 8.9906 7.76728 8.98578C7.41675 8.6292 6.84335 8.18647 5.83799 7.42131L0.789148 3.57876C-0.10187 2.90063 -0.262384 1.64409 0.43063 0.772203Z"
+											fill="rgba(0, 0, 0, 0.4)" />
+									</svg>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- Section Header -->
 			</section>
 		</main>
 	</body>

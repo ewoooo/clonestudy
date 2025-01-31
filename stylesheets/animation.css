@@ -1,0 +1,117 @@
+:root {
+	--spring-easing-parent: linear(
+		0,
+		0.008,
+		0.03,
+		0.068,
+		0.123 5.1%,
+		0.244 7.7%,
+		0.642 15.4%,
+		0.753,
+		0.844,
+		0.92,
+		0.98,
+		1.026,
+		1.058 29.9%,
+		1.073,
+		1.082,
+		1.087 35.3% 37.4%,
+		1.084 39.6%,
+		1.075 42.1%,
+		1.017 55.6%,
+		1.006 59.6%,
+		0.998 63.8%,
+		0.993 68.4%,
+		0.992 73.7%,
+		1
+	);
+	--spring-easing-child: linear(
+		0,
+		0.009,
+		0.035 2.1%,
+		0.141 4.4%,
+		0.723 12.9%,
+		0.938 16.7%,
+		1.017,
+		1.077,
+		1.121,
+		1.149 24.3%,
+		1.159,
+		1.163,
+		1.161,
+		1.154 29.9%,
+		1.129 32.8%,
+		1.051 39.6%,
+		1.017 43.1%,
+		0.991,
+		0.977 51%,
+		0.974 53.8%,
+		0.975 57.1%,
+		0.997 69.8%,
+		1.003 76.9%,
+		1
+	);
+}
+
+.controller__background {
+	--x: -35px;
+	--y: 140px;
+	--scale: 0;
+	--opacity: 0;
+
+	transform-origin: center center;
+	animation-timing-function: var(--spring-easing-parent);
+	animation-duration: 1000ms;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	opacity: 0;
+}
+
+.controller__child {
+	--y: 30px;
+	--scale: 0.9;
+	--opacity: 1;
+
+	transform-origin: center center;
+	animation-duration: 1200ms;
+	animation-delay: 100ms;
+	animation-timing-function: var(--spring-easing-child);
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	opacity: 0;
+}
+
+.is-active {
+	.controller__child,
+	.controller__background {
+		animation-name: isActive;
+	}
+}
+
+.is-inactive {
+	.controller__child,
+	.controller__background {
+		animation-name: isInactive;
+	}
+}
+
+@keyframes isActive {
+	0% {
+		opacity: var(--opacity);
+		transform: scale(var(--scale)) translate3d(var(--x), var(--y), 0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) translate3d(0px, 0px, 0);
+	}
+}
+@keyframes isInactive {
+	0% {
+		opacity: 1;
+		transform: scale(1) translate3d(0px, 0px, 0);
+	}
+	100% {
+		opacity: var(--opacity);
+		transform: scale(var(--scale)) translate3d(var(--x), var(--y), 0);
+	}
+}
