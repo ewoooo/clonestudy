@@ -29,12 +29,11 @@ window.addEventListener("DOMContentLoaded", () => {
 			}
 		}
 
-		updateDOM(arg) {
-			const buttons = Array.from(this.buttons);
-			buttons.forEach((button) => button.classList.remove("button-disabled"));
+		updateDOM() {
+			this.buttons.forEach((button) => button.classList.remove("button-disabled"));
 
-			if (arg === "max") buttons[1].classList.add("button-disabled");
-			if (arg === "min") buttons[0].classList.add("button-disabled");
+			if (this.curIndex === this.maxIndex) this.buttons[1].classList.add("button-disabled");
+			if (this.curIndex === 0) this.buttons[0].classList.add("button-disabled");
 		}
 
 		addEventListeners() {
@@ -45,6 +44,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 			this.slider.addEventListener("scroll", () => {
 				this.updateIndex();
+				this.updateDOM();
 			});
 		}
 
@@ -53,7 +53,6 @@ window.addEventListener("DOMContentLoaded", () => {
 			const element = this.map;
 			for (let i = 0; i <= this.maxIndex; i++) {
 				if (element[i].coordinate > curX) {
-					console.log(i, curX);
 					return (this.curIndex = i);
 				}
 			}
@@ -63,28 +62,28 @@ window.addEventListener("DOMContentLoaded", () => {
 			this.slider.classList.remove("slide-snap-control");
 			setTimeout(() => {
 				this.slider.classList.add("slide-snap-control");
-			}, 100);
+			}, 800);
 		}
 
 		thumbLeft() {
 			if (this.curIndex > 0) {
 				this.scroll(-this.distance);
-				this.updateIndex();
-				this.updateDOM();
 				this.updateSnapControl();
-			} else {
-				this.updateDOM("min");
+				setTimeout(() => {
+					this.updateIndex();
+					this.updateDOM();
+				}, 700);
 			}
 		}
 
 		thumbRight() {
 			if (this.curIndex < this.maxIndex) {
 				this.scroll(this.distance);
-				this.updateIndex();
-				this.updateDOM();
 				this.updateSnapControl();
-			} else {
-				this.updateDOM("max");
+				setTimeout(() => {
+					this.updateIndex();
+					this.updateDOM();
+				}, 700);
 			}
 		}
 

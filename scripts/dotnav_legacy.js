@@ -97,7 +97,6 @@ function updateDOM({ index, amount }) {
 	items.forEach((item, i) => {
 		if (i === index) {
 			item.classList.add("dotnav-item-active");
-			window.scrollTo(images[index].scrollX, window.scrollY);
 			if (amount === 99) item.style.setProperty("--dotnav-progress-factor", `0%`);
 			else item.style.setProperty("--dotnav-progress-factor", `${factor}%`);
 		} else {

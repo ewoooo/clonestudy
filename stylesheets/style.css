@@ -420,7 +420,7 @@
 		}
 
 		.controller-container {
-			transition: transform 200ms ease;
+			transition: transform 200ms;
 			display: flex;
 			&:hover {
 				transform: scale(1.1);
@@ -428,8 +428,6 @@
 		}
 
 		.controller-play-pause {
-			width: var(--aap-min-height);
-			height: var(--aap-min-height);
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -437,6 +435,8 @@
 		}
 
 		.button-play-pause {
+			width: var(--aap-min-height);
+			height: var(--aap-min-height);
 			border: none;
 			background: none;
 			position: relative;
@@ -462,14 +462,14 @@
 		.dotnav-item {
 			--dotnav-size: 8px;
 			--dotnav-size-active: 50px;
-			--dotnav-color: rgba(0, 0, 0, 0.2);
-			--dotnav-color-progress: rgba(0, 0, 0, 0.5);
+			--dotnav-color: rgba(0, 0, 0, 0.4);
+			--dotnav-color-progress: rgba(0, 0, 0, 0.7);
 			--dotnav-active-factor: 0%;
 
 			width: var(--dotnav-size);
 			height: var(--dotnav-size);
 			background: var(--dotnav-color);
-			transition: width 300ms ease;
+			transition: width 400ms ease;
 			border-radius: 99px;
 			overflow: hidden;
 			cursor: pointer;
@@ -559,11 +559,112 @@
 			height: var(--paddle-size);
 			justify-content: center;
 			align-items: center;
-			transition: transform ease 200ms;
+			transition: transform ease 200ms, opacity ease 200ms;
 			padding: 14px;
 
 			&:hover {
 				transform: scale(1.1);
+			}
+		}
+	}
+}
+
+.section-sticky-container {
+	margin-top: 100px;
+}
+
+.section-design {
+	position: relative;
+	padding-top: 60px;
+	padding-bottom: 160px;
+
+	.intro-sticky-container {
+		position: relative;
+		height: 200vh;
+		z-index: 2;
+
+		.intro-content-container {
+			width: 100%;
+		}
+
+		.section-headline-container {
+			text-align: center;
+		}
+
+		.section-ps-intro {
+			width: 75%;
+			margin-top: 32px;
+			margin-inline-start: auto;
+			margin-inline-end: auto;
+		}
+
+		.viewport-content {
+			width: 980px;
+		}
+
+		.typography-ps-intro {
+			font-size: 19.5px;
+			line-height: 32px;
+			font-weight: 600;
+			text-align: center;
+		}
+		.typography-ps-eyebrow {
+			font-size: 21px;
+			line-height: 31px;
+			font-weight: 800;
+			text-align: center;
+			letter-spacing: 0.2px;
+			word-break: keep-all;
+		}
+		.typography-ps-super {
+			margin-top: 30px;
+			font-size: 70px;
+			line-height: 80.5px;
+			font-weight: 700;
+			text-align: center;
+			letter-spacing: 0.2px;
+			word-break: keep-all;
+
+			strong {
+				color: #147d89;
+			}
+		}
+
+		.screener {
+			transition: opacity 1200ms ease;
+			opacity: 1;
+		}
+
+		.is-disabled {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+
+	.hardware-sticky-container {
+		position: absolute;
+		height: 400vh;
+		inset: 0;
+		z-index: 3;
+		pointer-events: none;
+
+		.hardware-container {
+			--size: 620px;
+			--translate: 142px;
+			--scale: 1.7;
+
+			width: var(--size);
+			height: var(--size);
+			position: absolute;
+			margin: 0 auto;
+			margin-top: 100px;
+			inset: 0;
+			transform: translateY(var(--translate));
+
+			video {
+				width: 100%;
+				height: 100%;
+				transform: matrix(var(--scale), 0, 0, var(--scale), 0, 0);
 			}
 		}
 	}
