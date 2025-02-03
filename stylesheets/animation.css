@@ -53,65 +53,124 @@
 	);
 }
 
+.controller__background,
+.controller__child {
+	transform-origin: center center;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	opacity: 0;
+}
+
 .controller__background {
 	--x: -35px;
 	--y: 140px;
 	--scale: 0;
 	--opacity: 0;
-
-	transform-origin: center center;
-	animation-timing-function: var(--spring-easing-parent);
 	animation-duration: 1000ms;
-	animation-fill-mode: forwards;
-	animation-iteration-count: 1;
-	opacity: 0;
+	animation-timing-function: var(--spring-easing-parent);
 }
 
 .controller__child {
 	--y: 30px;
 	--scale: 0.9;
 	--opacity: 1;
-
-	transform-origin: center center;
 	animation-duration: 1200ms;
 	animation-delay: 100ms;
 	animation-timing-function: var(--spring-easing-child);
+}
+
+@keyframes dotnav-active {
+	0% {
+		opacity: var(--opacity);
+		transform: scale(var(--scale)) translate3d(var(--x), var(--y), 0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) translate3d(0, 0, 0);
+	}
+}
+
+@keyframes dotnav-inactive {
+	0% {
+		opacity: 1;
+		transform: scale(1) translate3d(0, 0, 0);
+	}
+	100% {
+		opacity: var(--opacity);
+		transform: scale(var(--scale)) translate3d(var(--x), var(--y), 0);
+	}
+}
+
+.is-active .controller__background,
+.is-active .controller__child {
+	animation-name: dotnav-active;
+}
+
+.is-inactive .controller__background,
+.is-inactive .controller__child {
+	animation-name: dotnav-inactive;
+}
+
+/* dots */
+
+.dotnav-item {
+	transform-origin: center center;
 	animation-fill-mode: forwards;
 	animation-iteration-count: 1;
+	animation-duration: 300ms;
+	animation-delay: 100ms;
+	animation-timing-function: ease;
+	animation-name: toggleDot;
+}
+
+.dotnav-item:nth-child(2) {
+	animation-delay: 350ms;
+}
+.dotnav-item:nth-child(3) {
+	animation-delay: 400ms;
+}
+.dotnav-item:nth-child(4) {
+	animation-delay: 450ms;
+}
+
+@keyframes dotnav-item-active {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes dotnav-item-inactive {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0);
+	}
+}
+
+.is-active .dotnav-item {
+	animation-name: dotnav-item-active;
+}
+.is-inactive .dotnav-item {
+	animation-name: dotnav-item-inactive;
+}
+
+.animation-target {
 	opacity: 0;
+	pointer-events: none;
+	transform: translateY(10px);
+	transition: opacity 800ms ease, transform 800ms ease;
 }
 
-.is-active {
-	.controller__child,
-	.controller__background {
-		animation-name: isActive;
-	}
-}
-
-.is-inactive {
-	.controller__child,
-	.controller__background {
-		animation-name: isInactive;
-	}
-}
-
-@keyframes isActive {
-	0% {
-		opacity: var(--opacity);
-		transform: scale(var(--scale)) translate3d(var(--x), var(--y), 0);
-	}
-	100% {
-		opacity: 1;
-		transform: scale(1) translate3d(0px, 0px, 0);
-	}
-}
-@keyframes isInactive {
-	0% {
-		opacity: 1;
-		transform: scale(1) translate3d(0px, 0px, 0);
-	}
-	100% {
-		opacity: var(--opacity);
-		transform: scale(var(--scale)) translate3d(var(--x), var(--y), 0);
-	}
+.is-visible {
+	opacity: 1;
+	pointer-events: none;
+	transform: translateY(0);
 }

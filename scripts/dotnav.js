@@ -102,7 +102,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 			for (let i = 0; i <= this.maxIndex; i++) {
 				if (element[i].coordinate > curX) {
-					console.log(i, curX, element[i].coordinate);
 					this.curIndex = i;
 					this.updateCount("reset");
 					return;
