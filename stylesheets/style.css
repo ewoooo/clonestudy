@@ -110,7 +110,7 @@
 	margin-top: -5vh;
 	overflow: hidden;
 
-	.welcome--media {
+	.welcome-media {
 		overflow: hidden;
 		position: absolute;
 		display: grid;
@@ -729,24 +729,24 @@
 }
 
 @media screen and (max-width: 1068px) {
-	.section--welcome {
+	.section-welcome {
 		--welcome-height: 422px;
 
-		.welcome--media {
+		.welcome-media {
 			width: 476px;
 			position: relative;
 			display: flex;
 		}
 
-		.media--video {
+		.media-video {
 			display: none;
 		}
 
-		.media--picture {
+		.media-picture {
 			display: block;
 		}
 	}
-	.marquee--container {
+	.marquee-container {
 		top: 0px;
 	}
 
