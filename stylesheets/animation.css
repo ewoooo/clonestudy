@@ -53,15 +53,15 @@
 	);
 }
 
-.controller__background,
-.controller__child {
+.controller-background,
+.controller-child {
 	transform-origin: center center;
 	animation-fill-mode: forwards;
 	animation-iteration-count: 1;
 	opacity: 0;
 }
 
-.controller__background {
+.controller-background {
 	--x: -35px;
 	--y: 140px;
 	--scale: 0;
@@ -70,7 +70,7 @@
 	animation-timing-function: var(--spring-easing-parent);
 }
 
-.controller__child {
+.controller-child {
 	--y: 30px;
 	--scale: 0.9;
 	--opacity: 1;
@@ -101,13 +101,13 @@
 	}
 }
 
-.is-active .controller__background,
-.is-active .controller__child {
+.is-active .controller-background,
+.is-active .controller-child {
 	animation-name: dotnav-active;
 }
 
-.is-inactive .controller__background,
-.is-inactive .controller__child {
+.is-inactive .controller-background,
+.is-inactive .controller-child {
 	animation-name: dotnav-inactive;
 }
 

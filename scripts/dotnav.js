@@ -137,7 +137,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	const nav = new Navigation();
 	nav.buttons = document.querySelectorAll(".dotnav-item");
-	nav.pauseButton = document.querySelector(".button-play-pause ");
+	nav.pauseButton = document.querySelector(".button-play-pause");
 	nav.items = document.querySelectorAll(".gallery-item");
 	nav.slider = document.querySelector(".media-gallery");
 	nav.animationID = () => {

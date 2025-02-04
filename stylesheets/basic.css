@@ -75,7 +75,7 @@ body {
 	opacity: 0.42;
 }
 
-.typography--callout {
+.typography-callout {
 	font-size: 30px;
 	line-height: 39px;
 	font-weight: 700;
@@ -247,7 +247,7 @@ strong {
 	opacity: 0.42;
 }
 
-.typography--callout,
+.typography-callout,
 .typography-ps-callout {
 	font-size: 30px;
 	line-height: 39px;
@@ -337,7 +337,8 @@ strong {
 	scroll-snap-type: x mandatory;
 }
 
-.sticky-element {
+.sticky-element,
+.sticky-gallery {
 	position: sticky;
 	height: 100lvh;
 	top: 0;
