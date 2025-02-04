@@ -247,20 +247,6 @@ strong {
 	opacity: 0.42;
 }
 
-.typography-callout,
-.typography-ps-callout {
-	font-size: 30px;
-	line-height: 39px;
-	font-weight: 700;
-	letter-spacing: 0.05rem;
-}
-
-.typography-ps-body {
-	font-size: 17px;
-	font-weight: 600;
-	line-height: 1.35;
-}
-
 .typography-media-card-gallery-headline {
 	line-height: 1.3;
 	font-size: 24px;
@@ -345,4 +331,72 @@ strong {
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
+}
+
+@layer section {
+	.section-headline-container {
+		text-align: center;
+	}
+
+	.section-ps-intro {
+		width: 75%;
+		margin-top: 32px;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
+	}
+}
+
+@layer typography {
+	.typography-ps-intro {
+		font-size: 19.5px;
+		line-height: 32px;
+		font-weight: 600;
+		text-align: center;
+	}
+	.typography-ps-eyebrow {
+		font-size: 21px;
+		line-height: 31px;
+		font-weight: 800;
+		text-align: center;
+		letter-spacing: 0.2px;
+		word-break: keep-all;
+	}
+	.typography-ps-headline-super {
+		margin-top: 30px;
+		font-size: 70px;
+		line-height: 80.5px;
+		font-weight: 700;
+		text-align: center;
+		letter-spacing: 0.2px;
+		word-break: keep-all;
+	}
+
+	.typography-ps-flipbook {
+		font-size: 56px;
+		line-height: 1.3;
+		font-weight: 700;
+	}
+
+	.typography-ps-port-label {
+		font-size: 19px;
+		font-weight: 600;
+	}
+
+	.typography-callout,
+	.typography-ps-callout {
+		font-size: 30px;
+		line-height: 39px;
+		font-weight: 700;
+		letter-spacing: 0.05rem;
+	}
+
+	.typography-ps-body {
+		font-size: 17px;
+		font-weight: 600;
+		line-height: 1.35;
+	}
+
+	strong {
+		color: #147d89;
+	}
 }
