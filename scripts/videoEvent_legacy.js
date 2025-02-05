@@ -16,7 +16,7 @@ class stickyObserver {
 		for (let entry of this.entries) {
 			const t = entry.target.getBoundingClientRect();
 			if (0 <= t.top && t.top <= tolerance) {
-				console.log(t.top);
+				console.log(t);
 				return (this.target = entry);
 			}
 		}
@@ -35,7 +35,7 @@ class stickyObserver {
 
 		this.controlDOM();
 
-		console.log(this.target.query);
+		// console.log(this.target.query);
 		this.sendQuery(this.target.query);
 	}
 
