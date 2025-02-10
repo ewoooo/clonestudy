@@ -62,3 +62,15 @@
     getBoundinngClinetRect() 메서드는 화면 상에서 렌더된 벡터와 방향값을 전달함.
     sticky 요소는 Container 요소 안에서만 해당 성질을 유지하므로, Container 하단과 sticky 요소의 하단값이 0 이하인 경우, sticky는 종료가 됨.
     이를 응용하여 container.bottom과 sticky.bottom의 사이 간격을 거리라고 하고, 거리가 임계점을 넘어가면 특정 함수를 실행하도록 유도할 수 있음.
+
+### Pub
+
+1. built
+    - global
+    - basic (no class)
+    - sk
+    - ps
+    - hidden
+2. module
+    - sectional case
+    - special case

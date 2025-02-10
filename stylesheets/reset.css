@@ -1,3 +1,54 @@
+@font-face {
+	font-family: "SF Pro KR", sans-serif;
+	font-weight: 100;
+	font-style: normal;
+	src: url("src/fonts/SFProKRDisplay_thin.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "SF Pro KR", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	src: url("src/fonts/SFProKRDisplay_ultralight.woff2") format("woff2"), local("SF Pro");
+}
+@font-face {
+	font-family: "SF Pro KR", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	src: url("src/fonts/SFProKRDisplay_light.woff2") format("woff2"), local("SF Pro");
+}
+
+@font-face {
+	font-family: "SF Pro KR", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	src: url("src/fonts/SFProKRDisplay_regular.woff2") format("woff2"), local("SF Pro");
+}
+@font-face {
+	font-family: "SF Pro KR", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	src: url("src/fonts/SFProKRDisplay_medium.woff2") format("woff2"), local("SF Pro");
+}
+@font-face {
+	font-family: "SF Pro KR", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	src: url("src/fonts/SFProKRDisplay_semibold.woff2") format("woff2"), local("SF Pro");
+}
+@font-face {
+	font-family: "SF Pro KR", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	src: url("src/fonts/SFProKRDisplay_body.woff2") format("woff2"), local("SF Pro");
+}
+@font-face {
+	font-family: "SF Pro KR", sans-serif;
+	font-weight: 800;
+	font-style: normal;
+	src: url("src/fonts/SFProKRDisplay_black.woff2") format("woff2"), local("SF Pro");
+}
+
 /* box-sizing 규칙을 명시합니다. */
 *,
 *::before,
@@ -36,6 +87,8 @@ ol {
 body {
 	min-height: 100vh;
 	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* 제목 요소와 상호작용하는 요소에 대해 line-height를 더 짧게 설정합니다. */
@@ -66,7 +119,7 @@ a:not([class]) {
 /* 이미지 관련 작업을 더 쉽게 합니다. */
 img,
 picture {
-	max-width: 100%;
+	/* max-width: 100%; */
 	display: block;
 }
 
@@ -86,4 +139,56 @@ textarea:not([rows]) {
 /* 고정된 모든 항목에는 여분의 스크롤 여백이 있어야 합니다. */
 :target {
 	scroll-margin-block: 5ex;
+}
+
+abbr,
+blockquote,
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
+}
+
+:lang(ko) {
+	word-break: keep-all;
+}
+
+:root {
+	--font: "SF Pro KR";
+}
+
+body {
+	font-family: Pretendard, var(--font), SF Pro Display, SF Pro Icons, Apple Gothic, HY Gulim, MalgunGothic, HY Dotum, Lexi Gulim, Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	line-height: 27px;
+	font-weight: 400;
 }
