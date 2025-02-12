@@ -107,6 +107,4 @@ window.addEventListener("DOMContentLoaded", () => {
 	slide.getDistance();
 	slide.addEventListeners();
 	slide.updateIndex();
-
-	console.log(slide);
 });

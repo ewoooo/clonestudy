@@ -3,13 +3,12 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="stylesheets/reset.css" />
-		<link rel="stylesheet" href="stylesheets/basic.css" />
 		<link rel="stylesheet" href="stylesheets/style.css" />
 		<link rel="stylesheet" href="stylesheets/animation.css" />
 		<script src="scripts/dotnav.js" defer></script>
 		<script src="scripts/slider.js" defer></script>
 		<script src="scripts/observer.js" defer></script>
+		<script src="scripts/tabnav.js" defer></script>
 		<script src="scripts/videoEvent_legacy.js" defer></script>
 		<title>Apple | Mac Mini</title>
 	</head>
@@ -537,7 +536,7 @@
 					<!-- Thermal Design -->
 				</section>
 				<!-- Section Design -->
-				<section class="section section-lifestyle no-pad-top no-pad-bottom WN">
+				<section class="section section-lifestyle no-pad-top no-pad-bottom">
 					<h2 class="visuallyhidden">라이프스타일</h2>
 					<div class="lifestyle-slides-container">
 						<div class="lifestyle-slides">
@@ -554,8 +553,8 @@
 					</div>
 				</section>
 				<!-- Section Lifestyle -->
-				<section class="section section-performance WN">
-					<div class="viewport-content WN">
+				<section class="section section-performance">
+					<div class="viewport-content">
 						<div class="section-ps-headline-container">
 							<h2 class="section-ps-eyebrow typography-ps-eyebrow">성능</h2>
 							<p class="section-ps-headline typography-ps-headline-super">M4 그리고 M4 Pro <br /><strong>챔피언 칩</strong></p>
@@ -563,28 +562,27 @@
 					</div>
 					<!-- Header -->
 					<div class="overflow-container">
-						<div class="animation-container">
+						<div class="animation-container WN">
 							<div class="centering-container">
 								<div class="scaled-hardware animate left">
 									<div class="hardware-container">
-										<picture class="overview-performance"></picture>
-									</div>
-								</div>
-								<!-- Left -->
-								<div class="scaled-hardware animate left">
-									<div class="hardware-container">
-										<picture class="overview-performance mac-mini"></picture>
-										<div class="screen screen-video">
-											<div class="inline-media-container">
-												<div class="video-wrapper">
-													<video src="" id="performance-middle-media"></video>
-													<!-- Video -->
-												</div>
-											</div>
-										</div>
+										<picture class="overview-performance-hardware">
+											<source media="(max-width: 734px)" srcset="src/imgs/performance_hw_mac_mini_alt_small.png 2x" />
+											<source media="(max-width: 1068px)" srcset="src/imgs/performance_hw_mac_mini_alt_medium.png 2x" />
+											<source media="(min-width: 0px)" srcset="src/imgs/performance_hw_mac_mini_alt_large.png 2x" />
+											<img src="src/imgs/performance_hw_mac_mini_large.png" />
+										</picture>
+										<!-- Mask -->
+										<picture class="overview-performance-screen screen-left">
+											<source media="(max-width: 734px)" srcset="src/imgs/performance_hw_screen_left_small.jpg" />
+											<source media="(max-width: 1068px)" srcset="src/imgs/performance_hw_screen_left_medium.jpg" />
+											<source media="(min-width: 0px)" srcset="src/imgs/performance_hw_screen_left_large.jpg" />
+											<img src="src/imgs/performance_hw_screen_left_large.jpg" />
+										</picture>
 										<!-- screen -->
 									</div>
 								</div>
+								<!-- Left -->
 								<!-- Center -->
 								<!-- Right -->
 							</div>
@@ -594,7 +592,6 @@
 							</div>
 						</div>
 						<!-- c/ animation -->
-
 						<div class="viewport-content intro-text-container">
 							<div class="section-ps-intro typography-ps-intro large-11 medium-10 small-12">
 								<p>
@@ -725,29 +722,39 @@
 						</div>
 						<!-- c/ item -->
 						<div class="tabnav-wrapper">
-							<div class="tabnav tabnav-elvated">
+							<div class="tabnav tabnav-elevated">
 								<div class="tabnav-platter">
-									<div class="tabnav-mask">
-										<ul class="tabnav-items" role="tablist">
-											<li class="tabnav-item tabnav-item-active" data-gallery-index="0" role="presentation"><span class="tabnav-label">생산성</span></li>
-											<li class="tabnav-item" data-gallery-index="1" role="presentation"><span class="tabnav-label">창의성</span></li>
-											<li class="tabnav-item" data-gallery-index="2" role="presentation"><span class="tabnav-label">STEM</span></li>
-											<li class="tabnav-item" data-gallery-index="3" role="presentation"><span class="tabnav-label">게임</span></li>
-											<li class="tabnav-item" data-gallery-index="4" role="presentation"><span class="tabnav-label">코딩</span></li>
+									<div class="tabnav-mask tabnav-mask-noscroll">
+										<ul id="performance-gallery-tabnav-items" class="tabnav-items" role="tablist">
+											<li class="tabnav-item tabnav-item-active" data-gallery-index="0" role="presentation">
+												<button class="tabnav-link"><span class="tabnav-label">생산성</span></button>
+											</li>
+											<li class="tabnav-item" data-gallery-index="1" role="presentation">
+												<button class="tabnav-link"><span class="tabnav-label">창의성</span></button>
+											</li>
+											<li class="tabnav-item" data-gallery-index="2" role="presentation">
+												<button class="tabnav-link"><span class="tabnav-label">STEM</span></button>
+											</li>
+											<li class="tabnav-item" data-gallery-index="3" role="presentation">
+												<button class="tabnav-link"><span class="tabnav-label">게임</span></button>
+											</li>
+											<li class="tabnav-item" data-gallery-index="4" role="presentation">
+												<button class="tabnav-link"><span class="tabnav-label">코딩</span></button>
+											</li>
 										</ul>
 										<!-- tabnav items -->
 									</div>
-									<div class="tabnav-indicator"></div>
+									<div id="performance-gallery-tabnav-indicator" class="tabnav-indicator"></div>
 								</div>
 							</div>
 						</div>
 						<!-- c/ tabnav -->
 						<div class="viewport-content captions-container">
-							<div class="gallery-performance-captions captions-gallery">
+							<div id="gallery-performance-captions" class="gallery-performance-captions captions-gallery large-8 medium-10 small-12">
 								<div class="gallery-caption current" data-caption-gallery-item>
 									<p class="typography-ps-intro">
 										일상적인 작업에 쏟는 시간을 줄이고, 여러 앱 사이를 매끄럽게 넘나들고, Microsoft Excel, Slack, Zoom 등의 앱으로 창작과 협업을 즐기세요. 그리고 Apple
-										Intelligence와 함께라면 막강한 생산성을 발휘하는 데 필요한 각종 기능들까지 활용할 수 있답니다
+										Intelligence와 함께라면 막강한 생산성을 발휘하는 데 필요한 각종 기능들까지 활용할 수 있답니다.
 									</p>
 								</div>
 								<!-- item -->

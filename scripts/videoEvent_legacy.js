@@ -182,8 +182,6 @@ window.addEventListener("DOMContentLoaded", () => {
 		});
 	};
 
-	console.log(observer);
-
 	// scroll event
 	window.addEventListener("scroll", onScroll, { passive: true });
 
