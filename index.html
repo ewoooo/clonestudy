@@ -562,7 +562,7 @@
 					</div>
 					<!-- Header -->
 					<div class="overflow-container">
-						<div class="animation-container WN">
+						<div class="animation-container">
 							<div class="centering-container">
 								<div class="scaled-hardware animate left">
 									<div class="hardware-container">
@@ -583,7 +583,43 @@
 									</div>
 								</div>
 								<!-- Left -->
+								<div class="scaled-hardware animate center">
+									<div class="hardware-container">
+										<picture class="overview-performance-hardware mac-mini">
+											<source media="(max-width: 734px)" srcset="src/imgs/performance_hw_mac_mini_small.png 2x" />
+											<source media="(max-width: 1068px)" srcset="src/imgs/performance_hw_mac_mini_medium.png 2x" />
+											<source media="(min-width: 0px)" srcset="src/imgs/performance_hw_mac_mini_large.png 2x" />
+											<img src="src/imgs/performance_hw_mac_mini_large.png" />
+										</picture>
+										<!-- Mask -->
+										<picture class="overview-performance-screen screen-center">
+											<source media="(max-width: 734px)" srcset="src/imgs/performance_hw_screen_center_small.jpg" />
+											<source media="(max-width: 1068px)" srcset="src/imgs/performance_hw_screen_center_medium.jpg" />
+											<source media="(min-width: 0px)" srcset="src/imgs/performance_hw_screen_center_large.jpg" />
+											<img src="src/imgs/performance_hw_screen_left_large.jpg" />
+										</picture>
+										<!-- screen -->
+									</div>
+								</div>
 								<!-- Center -->
+								<div class="scaled-hardware animate right">
+									<div class="hardware-container">
+										<picture class="overview-performance-hardware">
+											<source media="(max-width: 734px)" srcset="src/imgs/performance_hw_mac_mini_alt_small.png 2x" />
+											<source media="(max-width: 1068px)" srcset="src/imgs/performance_hw_mac_mini_alt_medium.png 2x" />
+											<source media="(min-width: 0px)" srcset="src/imgs/performance_hw_mac_mini_alt_large.png 2x" />
+											<img src="src/imgs/performance_hw_mac_mini_large.png" />
+										</picture>
+										<!-- Mask -->
+										<picture class="overview-performance-screen screen-right">
+											<source media="(max-width: 734px)" srcset="src/imgs/performance_hw_screen_right_small.jpg" />
+											<source media="(max-width: 1068px)" srcset="src/imgs/performance_hw_screen_right_medium.jpg" />
+											<source media="(min-width: 0px)" srcset="src/imgs/performance_hw_screen_right_large.jpg" />
+											<img src="src/imgs/performance_hw_screen_left_large.jpg" />
+										</picture>
+										<!-- screen -->
+									</div>
+								</div>
 								<!-- Right -->
 							</div>
 							<!-- c/ centering -->
@@ -623,21 +659,23 @@
 					<!-- c/ Overflow -->
 					<div class="all-access-pass"></div>
 					<div class="gallery-performance tabnav-gallery">
-						<div class="item-container">
-							<div class="gallery-item bento bento-content-width grid">
+						<div id="performance-gallery-item" class="item-container">
+							<div class="gallery-item bento bento-content-width grid current">
 								<div class="card tile tile-rounded card-large gallery-item-left">
 									<picture class="gallery-image">
-										<source media="(max-width: 1068px)" srcset="" />
-										<source media="(max-width: 734px)" srcset="" />
-										<img src="" />
+										<source media="(max-width: 734px)" srcset="src/imgs/performance_productivity_1_small.jpg" />
+										<source media="(max-width: 1068px)" srcset="src/imgs/performance_productivity_1_medium.jpg" />
+										<source media="(min-width: 0px)" srcset="src/imgs/performance_productivity_1_large.jpg" />
+										<img src="src/imgs/performance_productivity_1_large.jpg" />
 									</picture>
 								</div>
 								<!-- card -->
 								<div class="card tile tile-rounded card-large gallery-item-right">
 									<picture class="gallery-image">
-										<source media="(max-width: 1068px)" srcset="" />
-										<source media="(max-width: 734px)" srcset="" />
-										<img src="" />
+										<source media="(max-width: 734px)" srcset="src/imgs/performance_productivity_2_small.jpg" />
+										<source media="(max-width: 1068px)" srcset="src/imgs/performance_productivity_2_medium.jpg" />
+										<source media="(min-width: 0px)" srcset="src/imgs/performance_productivity_2_large.jpg" />
+										<img src="src/imgs/performance_productivity_2_large.jpg" />
 									</picture>
 								</div>
 								<!-- card -->
@@ -646,17 +684,19 @@
 							<div class="gallery-item bento bento-content-width grid">
 								<div class="card tile tile-rounded card-large gallery-item-left">
 									<picture class="gallery-image">
-										<source media="(max-width: 1068px)" srcset="" />
-										<source media="(max-width: 734px)" srcset="" />
-										<img src="" />
+										<source media="(max-width: 734px)" srcset="src/imgs/performance_creativity_1_small.jpg" />
+										<source media="(max-width: 1068px)" srcset="src/imgs/performance_creativity_1_medium.jpg" />
+										<source media="(min-width: 0px)" srcset="src/imgs/performance_creativity_1_large.jpg" />
+										<img src="src/imgs/performance_creativity_1_large.jpg" />
 									</picture>
 								</div>
 								<!-- card -->
 								<div class="card tile tile-rounded card-large gallery-item-right">
 									<picture class="gallery-image">
-										<source media="(max-width: 1068px)" srcset="" />
-										<source media="(max-width: 734px)" srcset="" />
-										<img src="" />
+										<source media="(max-width: 734px)" srcset="src/imgs/performance_creativity_2_small.jpg" />
+										<source media="(max-width: 1068px)" srcset="src/imgs/performance_creativity_2_medium.jpg" />
+										<source media="(min-width: 0px)" srcset="src/imgs/performance_creativity_2_large.jpg" />
+										<img src="src/imgs/performance_creativity_2_large.jpg" />
 									</picture>
 								</div>
 								<!-- card -->
@@ -665,17 +705,19 @@
 							<div class="gallery-item bento bento-content-width grid">
 								<div class="card tile tile-rounded card-large gallery-item-left">
 									<picture class="gallery-image">
-										<source media="(max-width: 1068px)" srcset="" />
-										<source media="(max-width: 734px)" srcset="" />
-										<img src="" />
+										<source media="(max-width: 734px)" srcset="src/imgs/performance_stem_1_small.jpg" />
+										<source media="(max-width: 1068px)" srcset="src/imgs/performance_stem_1_medium.jpg" />
+										<source media="(min-width: 0px)" srcset="src/imgs/performance_stem_1_large.jpg" />
+										<img src="src/imgs/performance_stem_1_large.jpg" />
 									</picture>
 								</div>
 								<!-- card -->
 								<div class="card tile tile-rounded card-large gallery-item-right">
 									<picture class="gallery-image">
-										<source media="(max-width: 1068px)" srcset="" />
-										<source media="(max-width: 734px)" srcset="" />
-										<img src="" />
+										<source media="(max-width: 734px)" srcset="src/imgs/performance_stem_2_small.jpg" />
+										<source media="(max-width: 1068px)" srcset="src/imgs/performance_stem_2_medium.jpg" />
+										<source media="(min-width: 0px)" srcset="src/imgs/performance_stem_2_large.jpg" />
+										<img src="src/imgs/performance_stem_2_large.jpg" />
 									</picture>
 								</div>
 								<!-- card -->
@@ -684,17 +726,19 @@
 							<div class="gallery-item bento bento-content-width grid">
 								<div class="card tile tile-rounded card-large gallery-item-left">
 									<picture class="gallery-image">
-										<source media="(max-width: 1068px)" srcset="" />
-										<source media="(max-width: 734px)" srcset="" />
-										<img src="" />
+										<source media="(max-width: 734px)" srcset="src/imgs/performance_gaming_1_small.jpg" />
+										<source media="(max-width: 1068px)" srcset="src/imgs/performance_gaming_1_medium.jpg" />
+										<source media="(min-width: 0px)" srcset="src/imgs/performance_gaming_1_large.jpg" />
+										<img src="src/imgs/performance_gaming_1_large.jpg" />
 									</picture>
 								</div>
 								<!-- card -->
 								<div class="card tile tile-rounded card-large gallery-item-right">
 									<picture class="gallery-image">
-										<source media="(max-width: 1068px)" srcset="" />
-										<source media="(max-width: 734px)" srcset="" />
-										<img src="" />
+										<source media="(max-width: 734px)" srcset="src/imgs/performance_gaming_2_small.jpg" />
+										<source media="(max-width: 1068px)" srcset="src/imgs/performance_gaming_2_medium.jpg" />
+										<source media="(min-width: 0px)" srcset="src/imgs/performance_gaming_2_large.jpg" />
+										<img src="src/imgs/performance_gaming_2_large.jpg" />
 									</picture>
 								</div>
 								<!-- card -->
@@ -703,17 +747,19 @@
 							<div class="gallery-item bento bento-content-width grid">
 								<div class="card tile tile-rounded card-large gallery-item-left">
 									<picture class="gallery-image">
-										<source media="(max-width: 1068px)" srcset="" />
-										<source media="(max-width: 734px)" srcset="" />
-										<img src="" />
+										<source media="(max-width: 734px)" srcset="src/imgs/performance_coding_1_small.jpg" />
+										<source media="(max-width: 1068px)" srcset="src/imgs/performance_coding_1_medium.jpg" />
+										<source media="(min-width: 0px)" srcset="src/imgs/performance_coding_1_large.jpg" />
+										<img src="src/imgs/performance_coding_1_large.jpg" />
 									</picture>
 								</div>
 								<!-- card -->
 								<div class="card tile tile-rounded card-large gallery-item-right">
 									<picture class="gallery-image">
-										<source media="(max-width: 1068px)" srcset="" />
-										<source media="(max-width: 734px)" srcset="" />
-										<img src="" />
+										<source media="(max-width: 734px)" srcset="src/imgs/performance_coding_2_small.jpg" />
+										<source media="(max-width: 1068px)" srcset="src/imgs/performance_coding_2_medium.jpg" />
+										<source media="(min-width: 0px)" srcset="src/imgs/performance_coding_2_large.jpg" />
+										<img src="src/imgs/performance_coding_1_large.jpg" />
 									</picture>
 								</div>
 								<!-- card -->
@@ -802,25 +848,27 @@
 								달다.
 							</p>
 						</div>
+						<div class="section-ps-intro typography-ps-intro">
+							<p>
+								Mac mini에는 놀라운 앱들이 기본으로 내장되어 있습니다. 여기에 업계 최고 수준의 개인정보 보호 및 보안은 물론, 일부터 놀이까지 당신이 하는 모든 일에 도움을 줄 멋진
+								기능들로 가득하죠. 그리고 macOS는 Microsoft Word, Excel, Outlook, Slack, Adobe Photoshop 등 당신이 즐겨 쓰는 모든 앱의 속도와 반응성을 한 차원 끌어올립니다.
+							</p>
+							<p>
+								<a href="#" class="icon-wrapper">
+									<span class="icon-copy">macOS에 대해 더 알아보기</span>
+									<span class="icon icon-after more">></span>
+								</a>
+							</p>
+						</div>
+						<!-- body -->
 					</div>
 					<!-- header -->
-					<div class="section-ps-intro typography-ps-intro">
-						<p>
-							Mac mini에는 놀라운 앱들이 기본으로 내장되어 있습니다. 여기에 업계 최고 수준의 개인정보 보호 및 보안은 물론, 일부터 놀이까지 당신이 하는 모든 일에 도움을 줄 멋진 기능들로
-							가득하죠. 그리고 macOS는 Microsoft Word, Excel, Outlook, Slack, Adobe Photoshop 등 당신이 즐겨 쓰는 모든 앱의 속도와 반응성을 한 차원 끌어올립니다.
-						</p>
-						<p>
-							<a href="#" class="icon-wrapper">
-								<span class="icon-copy">macOS에 대해 더 알아보기</span>
-								<span class="icon icon-after more">></span>
-							</a>
-						</p>
-					</div>
-					<!-- body -->
+
 					<picture class="overview-macos">
-						<source media="(max-width: 734px)" srcset="" />
-						<source media="(max-width: 1068px)" srcset="" />
-						<img src="" />
+						<source media="(max-width: 734px)" srcset="src/imgs/macos_bg_small.jpg" />
+						<source media="(max-width: 1068px)" srcset="src/imgs/macos_bg_medium.jpg" />
+						<source media="(min-width: 0px)" srcset="src/imgs/macos_bg_large.jpg" />
+						<img src="src/imgs/macos_bg_large.jpg" />
 					</picture>
 					<!-- picture -->
 				</section>
@@ -880,9 +928,10 @@
 								<div class="inline-meida-component-container apple-intelligence-playground-video">
 									<div class="video-wrapper">
 										<picture class="overview-apple-intelligence-image-playground">
-											<source media="(max-width: 734px)" srcset="" />
-											<source media="(max-width: 1068px)" srcset="" />
-											<img src="" />
+											<source media="(max-width: 734px)" srcset="src/imgs/macos_bg_small.jpg" />
+											<source media="(max-width: 1068px)" srcset="src/imgs/macos_bg_medium.jpg" />
+											<source media="(min-width: 0px)" srcset="src/imgs/macos_bg_large.jpg" />
+											<img src="src/imgs/macos_bg_large.jpg" />
 										</picture>
 									</div>
 								</div>

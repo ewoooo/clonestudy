@@ -1,14 +1,14 @@
 window.addEventListener("DOMContentLoaded", () => {
-	const buttons = document.querySelector("#performance-gallery-tabnav-items").children;
 	const indicator = document.querySelector("#performance-gallery-tabnav-indicator");
-	const gallery = document.querySelector("#gallery-performance-captions").children;
-	const photos = document.querySelectorAll("");
+	const buttons = document.querySelector("#performance-gallery-tabnav-items").children;
+	const captions = document.querySelector("#gallery-performance-captions").children;
+	const images = document.querySelector("#performance-gallery-item").children;
 
 	class Tab {
-		constructor(trigger, item, photo) {
+		constructor(trigger, caption, image) {
 			this.trigger = trigger;
-			this.item = item;
-			this.photo = photo;
+			this.caption = caption;
+			this.image = image;
 		}
 
 		get offsetX() {
@@ -24,8 +24,9 @@ window.addEventListener("DOMContentLoaded", () => {
 		constructor(entries, indicator) {
 			this.indicator = indicator;
 			this.entries = entries;
-			this.index = undefined;
+			this.index = null;
 			this._target = null;
+			this._pretarget = null;
 		}
 
 		set target(i) {
@@ -44,32 +45,42 @@ window.addEventListener("DOMContentLoaded", () => {
 
 		onClick(e) {
 			const index = parseInt(e.currentTarget.dataset.galleryIndex);
+			if (this._target && this._target !== this._pretarget) this._pretarget = this._target;
 			this.target = index;
-			console.log(e.currentTarget);
-			console.log(this._target);
 			this.updateDom();
 		}
 
 		updateDom() {
 			this.entries.forEach((entry) => {
 				entry.trigger.classList.remove("tabnav-item-active");
-				entry.item.classList.remove("current");
+				entry.caption.classList.remove("current");
+				entry.image.classList.remove("current");
 			});
-
+			if (this._pretarget) this._pretarget.image.classList.add("pre");
 			this._target.trigger.classList.add("tabnav-item-active");
-			this._target.item.classList.add("current");
-			this.indicator.style.setProperty(`--tabnav-indicator-start`, `${this._target.offsetX + 6}px`);
-			this.indicator.style.setProperty(`--tabnav-indicator-width`, `${this._target.width}px`);
+			this._target.caption.classList.add("current");
+			this._target.image.classList.add("current");
+			this.updateIndicator();
+		}
+
+		updateIndicator() {
+			if (!this._target) {
+				this.indicator.style.setProperty(`--tabnav-indicator-start`, `${this.entries[0].offsetX + 6}px`);
+				this.indicator.style.setProperty(`--tabnav-indicator-width`, `${this.entries[0].width}px`);
+			} else {
+				this.indicator.style.setProperty(`--tabnav-indicator-start`, `${this._target.offsetX + 6}px`);
+				this.indicator.style.setProperty(`--tabnav-indicator-width`, `${this._target.width}px`);
+			}
 		}
 	}
 
 	const nav = new Navigation(
 		Array.from(buttons, (button, i) => {
-			return new Tab(button, gallery[i], photo[i]);
+			return new Tab(button, captions[i], images[i]);
 		}),
 		indicator
 	);
 
-	console.log(nav);
 	nav.addEventListeners();
+	nav.updateIndicator();
 });
