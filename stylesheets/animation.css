@@ -196,33 +196,47 @@
 }
 
 @layer animation-tabnav {
-	.pre {
-		z-index: 2;
-		.gallery-item-left {
-			animation-name: gallery-item-shrink;
-			animation-duration: 800ms;
-			animation-fill-mode: forwards;
+	.section-mac-iphone {
+		.gallery-item {
+			opacity: 0;
+		}
+		.current {
+			z-index: 2;
+			opacity: 1;
+			animation-name: gallery-item-uncover;
 			animation-timing-function: ease;
+			animation-duration: 800ms;
 		}
 	}
 
-	.current {
-		z-index: 1;
-		animation-fill-mode: forwards;
-
-		.gallery-item-left {
-			animation-name: gallery-item-uncover;
-			animation-duration: 0ms;
-			animation-fill-mode: forwards;
+	.section-performance {
+		.gallery-item {
+			z-index: 2;
+			.gallery-item-left {
+				animation-name: gallery-item-shrink;
+				animation-duration: 800ms;
+				animation-fill-mode: forwards;
+				animation-timing-function: ease;
+			}
 		}
 
-		.gallery-item-right {
-			opacity: 1;
+		.current {
+			z-index: 1;
+			animation-fill-mode: forwards;
 
-			picture {
+			.gallery-item-left {
 				animation-name: gallery-item-uncover;
-				animation-timing-function: ease;
-				animation-duration: 800ms;
+				animation-duration: 0ms;
+				animation-fill-mode: forwards;
+			}
+
+			.gallery-item-right {
+				opacity: 1;
+				picture {
+					animation-name: gallery-item-uncover;
+					animation-timing-function: ease;
+					animation-duration: 800ms;
+				}
 			}
 		}
 	}

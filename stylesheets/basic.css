@@ -104,12 +104,6 @@
 		}
 	}
 
-	.tile-rounded {
-		--border-radius-medium: 28px;
-		border-radius: var(--border-radius-medium);
-		isolation: isolate;
-	}
-
 	.pin-bottom-center {
 		align-items: flex-end;
 		justify-content: center;
@@ -218,12 +212,6 @@
 		}
 	}
 
-	.tile-rounded {
-		--border-radius-medium: 28px;
-		border-radius: var(--border-radius-medium);
-		isolation: isolate;
-	}
-
 	.pin-bottom-center {
 		align-items: flex-end;
 		justify-content: center;
@@ -269,6 +257,16 @@
 	}
 
 	@layer unit {
+		.large-6 {
+			flex-basis: 50%;
+			max-width: 50%;
+		}
+
+		.large-7 {
+			flex-basis: 58.3333333%;
+			max-width: 58.3333333%;
+		}
+
 		.large-8 {
 			flex-basis: 66.6666666667%;
 			max-width: 66.6666666667%;
@@ -288,13 +286,17 @@
 			flex-basis: 100%;
 			max-width: 100%;
 		}
+
+		.large-centered {
+			margin-inline: auto;
+		}
 	}
 
 	@layer grid {
 		.grid {
 			--sk-cssgrid-columns: 12;
 			display: grid;
-			gap: 24pxs;
+			gap: 24px;
 			grid-template-columns: repeat(var(--sk-cssgrid-columns), minmax(0, 1fr));
 		}
 
@@ -356,13 +358,14 @@
 	@layer card {
 		.tile-rounded {
 			--sk-tile-border-radius-large: var(--sk-tile-border-radius, 18px);
-			--sk-tile-border-radius-xlarge: var(--sk-tile-border-radius, var(--sk-tile-border-radius-large));
+			--sk-tile-border-radius-xlarge: 72px;
 			--sk-tile-border-radius-medium: var(--sk-tile-border-radius, var(--sk-tile-border-radius-large));
 			--sk-tile-border-radius-small: var(--sk-tile-border-radius, var(--sk-tile-border-radius-large));
 			--sk-tile-border-radius-xsmall: var(--sk-tile-border-radius, var(--sk-tile-border-radius-large));
 
 			isolation: isolate;
-			border-radius: var(--sk-tile-bordeer-radius-xlarge);
+			border-radius: var(--sk-tile-border-radius-xlarge);
+			overflow: hidden;
 		}
 
 		.tile {
@@ -473,6 +476,7 @@
 		width: 87.5%;
 		max-width: 1680px;
 		margin-inline: auto;
+		margin-top: 73px;
 		order: 2;
 	}
 
@@ -709,5 +713,43 @@
 	a {
 		color: rgb(0, 102, 204);
 		letter-spacing: inherit;
+	}
+}
+
+@layer icon {
+	.icon::after,
+	.icon::before,
+	.more::after,
+	.more::before {
+		font-family: SF Pro Icons;
+		display: inline-block;
+		color: inherit;
+		font-weight: inherit;
+		line-height: 1;
+		font-size: normal;
+		z-index: 1;
+		text-decoration: none;
+	}
+
+	.more::after {
+		content: "";
+		position: relative;
+		top: -0.08em;
+	}
+
+	.more:not(.icon-before)::after {
+		display: inline;
+		position: static;
+	}
+}
+
+@layer container {
+	.inline-media-component-container {
+		position: relative;
+		width: 100%;
+		max-width: 1680px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }

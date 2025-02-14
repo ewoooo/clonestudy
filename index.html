@@ -863,7 +863,6 @@
 						<!-- body -->
 					</div>
 					<!-- header -->
-
 					<picture class="overview-macos">
 						<source media="(max-width: 734px)" srcset="src/imgs/macos_bg_small.jpg" />
 						<source media="(max-width: 1068px)" srcset="src/imgs/macos_bg_medium.jpg" />
@@ -876,12 +875,12 @@
 				<section class="section section-apple-intelligence">
 					<div class="inline-media-container apple-intelligence-media">
 						<div class="video-wrapper" data-video-id="apple-intelligence-video">
-							<video src="" id="apple-intelligence-video"></video>
-							<picture class="overview-apple-intelligence fallback-frame">
-								<source media="(max-width: 734px)" srcset="" />
-								<source media="(max-width: 1068px)" srcset="" />
-								<img src="" />
-							</picture>
+							<video id="apple-intelligence-video" autoplay loop muted>
+								<source media="(max-width: 734px)" src="src/videos/apple_intelligence_small.mov" />
+								<source media="(max-width: 1068px)" src="src/videos/apple_intelligence_medium.mov" />
+								<source media="(min-width: 0px)" src="src/videos/apple_intelligence_large.mov" />
+							</video>
+							<!-- <picture class="overview-apple-intelligence fallback-frame"> </picture> -->
 						</div>
 					</div>
 					<!-- media -->
@@ -889,18 +888,33 @@
 						<div class="section-ps-headline-container large-centered small-uncentered large-12 small-12">
 							<h2 aria-label="Apple Intelligence">
 								<picture class="logo-apple-intelligence">
-									<source media="(max-width: 734px)" srcset="" />
-									<source media="(max-width: 1068px)" srcset="" />
-									<img src="" />
+									<source media="(max-width: 734px)" srcset="ssrc/imgs/apple_intelligence_logo_small.png" />
+									<source media="(max-width: 1068px)" srcset="src/imgs/apple_intelligence_logo_medium.png" />
+									<source media="(min-width: 0px)" srcset="src/imgs/apple_intelligence_logo_large.png" />
+									<img src="src/imgs/apple_intelligence_logo_large.png" />
 								</picture>
 							</h2>
 							<p class="section-ps-headline typography-ps-headline-super">더 똑똑해질 준비됐나요?</p>
+						</div>
+						<div class="section-ps-intro typography-ps-intro large-centered large-9 small-12">
+							<p>
+								Apple Intelligence는 당신이 글을 쓰고, 개성을 표출하고, 이것저것 척척 처리하는 것을 도와주는 개인용 지능 시스템입니다. 혁신적인 개인정보 보호 기능도 갖추고 있어 Apple은
+								물론 그 누구도 당신의 개인정보에 접근할 수 없으니 안심하고 쓸 수 있죠.<sup class="footnote footnote-number">
+									<a href="#footnote-1">1</a>
+								</sup>
+							</p>
+							<p>
+								<a href="#" class="icon-wrapper">
+									<span class="icon-cop">Apple Intelligence에 대해 더 알아보기</span>
+									<span class="icon icon-after more"></span>
+								</a>
+							</p>
 						</div>
 						<!-- c/ headline  -->
 					</div>
 					<!-- intro -->
 					<div class="bento-content-width grid apple-intelligence-bentos">
-						<div class="card tile tile-rounded grid-item grid-item-wrting-tools">
+						<div class="card tile tile-rounded grid-item grid-item-writing-tools">
 							<div class="card-contents">
 								<div class="card-copy">
 									<p class="typography-ps-intro">
@@ -909,10 +923,11 @@
 									</p>
 								</div>
 								<!-- copy -->
-								<picture class="overview-apple-intelligence-writing-tools">
-									<source media="(max-width: 734px)" srcset="" />
-									<source media="(max-width: 1068px)" srcset="" />
-									<img src="" />
+								<picture class="image-writing-tools">
+									<source media="(max-width: 734px)" srcset="src/imgs/apple_intelligence_writing_tools_small.jpg" />
+									<source media="(max-width: 1068px)" srcset="src/imgs/apple_intelligence_writing_tools_medium.jpg" />
+									<source media="(min-width: 0px)" srcset="src/imgs/apple_intelligence_writing_tools_large.jpg" />
+									<img src="src/imgs/apple_intelligence_writing_tools_large.jpg" />
 								</picture>
 							</div>
 						</div>
@@ -927,12 +942,11 @@
 								<!-- copy -->
 								<div class="inline-meida-component-container apple-intelligence-playground-video">
 									<div class="video-wrapper">
-										<picture class="overview-apple-intelligence-image-playground">
-											<source media="(max-width: 734px)" srcset="src/imgs/macos_bg_small.jpg" />
-											<source media="(max-width: 1068px)" srcset="src/imgs/macos_bg_medium.jpg" />
-											<source media="(min-width: 0px)" srcset="src/imgs/macos_bg_large.jpg" />
-											<img src="src/imgs/macos_bg_large.jpg" />
-										</picture>
+										<video id="apple-intelligence-video" autoplay loop muted>
+											<source media="(max-width: 734px)" src="src/videos/image_playground_small.mp4" />
+											<source media="(max-width: 1068px)" src="src/videos/image_playground_medium.mp4" />
+											<source media="(min-width: 0px)" src="src/videos/image_playground_large.mp4" />
+										</video>
 									</div>
 								</div>
 							</div>
@@ -949,9 +963,10 @@
 								</div>
 								<!-- copy -->
 								<picture class="overview-apple-intelligence-memory-movie image-memory-movie">
-									<source media="(max-width: 734px)" srcset="" />
-									<source media="(max-width: 1068px)" srcset="" />
-									<img src="" />
+									<source media="(max-width: 734px)" srcset="src/imgs/image_memory_movie_small.jpg" />
+									<source media="(max-width: 1068px)" srcset="src/imgs/image_memory_movie_medium.jpg" />
+									<source media="(min-width: 0px)" srcset="src/imgs/image_memory_movie_large.jpg" />
+									<img src=src/imgs/image_memory_movie_large.jpg" />
 								</picture>
 							</div>
 						</div>
@@ -961,11 +976,15 @@
 					<div class="viewport-content">
 						<div class="subsection-privacy">
 							<div class="subsection-headline-container large-centered large-centered small-uncentered large-9 small-12">
-								<picture class="icon-privacy">
-									<source media="(max-width: 734px)" srcset="" />
-									<source media="(max-width: 1068px)" srcset="" />
-									<img src="" />
-								</picture>
+								<div class="inline-media-container apple-intelligence-privacy-video">
+									<div class="video-wrapper">
+										<video class="icon-privacy" autoplay muted>
+											<source media="(max-width: 734px)" src="src/videos/symbol_privacy_small.mov" />
+											<source media="(max-width: 1068px)" src="src/videos/symbol_privacy_medium.mov" />
+											<source media="(min-width: 0px)" src="src/videos/symbol_privacy_large.mov" />
+										</video>
+									</div>
+								</div>
 								<h3 class="subsection-headline typography-ps-headline-reduced">
 									강력한 역량과 함께하는
 									<br class="large" />
@@ -997,7 +1016,7 @@
 					<div class="viewport-content">
 						<div class="section-ps-headline-container">
 							<h2 class="section-ps-eyebrow typography-ps-eyebrow">Mac + iPhone</h2>
-							<p class="section-ps-headline typography-ps-headline-super">진정한<strong>팀플레이.</strong></p>
+							<p class="section-ps-headline typography-ps-headline-super">진정한<strong> 팀플레이.</strong></p>
 						</div>
 						<!-- c/ headline -->
 						<div class="section-ps-intro typography-ps-intro large-7 medium-9 small-12">
@@ -1015,7 +1034,7 @@
 							<div class="tabnav tabnav-elevated">
 								<div class="tabnav-platter">
 									<div class="tabnav-mask tabnav-mask-noscroll">
-										<ul class="tabnav-items" role="tablist">
+										<ul class="tabnav-items" role="tablist" id="macOS-tabnav-buttons">
 											<li class="tabnav-item tabnav-item-active" data-gallery-index="0" role="presentation">
 												<button class="tabnav-link">
 													<span class="tabnav-label">iPhone 미러링</span>
@@ -1036,13 +1055,13 @@
 											<!-- item -->
 										</ul>
 									</div>
-									<div class="tabnav-indicator"></div>
+									<div class="tabnav-indicator" id="macOS-tabnav-indicator"></div>
 								</div>
 							</div>
 						</div>
 						<!-- tabnav -->
 						<div class="viewport-content caption-container">
-							<div class="gallery-mac-iphone-captions captions-gallery large-8 medium-10 small-12">
+							<div class="gallery-mac-iphone-captions captions-gallery large-8 medium-10 small-12" id="macOS-tabnav-captions">
 								<div class="gallery-caption current" role="tabpanel">
 									<div class="typography-ps-intro">Mac에서 iPhone 화면을 확인하고, 조작까지 할 수 있습니다. <br class="large" />손을 뻗어 iPhone을 집어들 필요가 없죠.</div>
 								</div>
@@ -1058,33 +1077,36 @@
 							</div>
 						</div>
 						<!-- caption -->
-						<div class="item-container">
-							<div id="gallery-mac-iphone-item-0" class="gallery-item gallery-item-mirroring current bento-content-width grid" data-ac-gallery-item="0">
+						<div class="item-container" id="macOS-tabnav-images">
+							<div class="gallery-item gallery-item-mirroring current bento-content-width grid" data-ac-gallery-item="0">
 								<div class="card tile tile-rounded card-large">
-									<picture class="overview-mac-iphone-mirroring-1">
-										<source media="(max-width: 734px)" srcset="" />
-										<source media="(max-width: 1068px)" srcset="" />
-										<img src="" />
+									<picture class="overview-mac-iphone-mirroring">
+										<source media="(max-width: 734px)" srcset="src/imgs/mac_iphone_mirroring_small.jpg" />
+										<source media="(max-width: 1068px)" srcset="src/imgs/mac_iphone_mirroring_medium.jpg" />
+										<source media="(min-width: 0px)" srcset="src/imgs/mac_iphone_mirroring_large.jpg" />
+										<img src="src/imgs/mac_iphone_mirroring_large.jpg" />
 									</picture>
 								</div>
 							</div>
 							<!-- item -->
-							<div id="gallery-mac-iphone-item-1" class="gallery-item gallery-item-mirroring bento-content-width grid" data-ac-gallery-item="1">
+							<div class="gallery-item gallery-item- bento-content-width grid" data-ac-gallery-item="1">
 								<div class="card tile tile-rounded card-large">
-									<picture class="overview-mac-iphone-mirroring-1">
-										<source media="(max-width: 734px)" srcset="" />
-										<source media="(max-width: 1068px)" srcset="" />
-										<img src="" />
+									<picture class="overview-mac-iphone-clipboard">
+										<source media="(max-width: 734px)" srcset="src/imgs/mac_iphone_clipboard_small.jpg" />
+										<source media="(max-width: 1068px)" srcset="src/imgs/mac_iphone_clipboard_medium.jpg" />
+										<source media="(min-width: 0px)" srcset="src/imgs/mac_iphone_clipboard_large.jpg" />
+										<img src="src/imgs/mac_iphone_mirroring_large.jpg" />
 									</picture>
 								</div>
 							</div>
 							<!-- item -->
-							<div id="gallery-mac-iphone-item-2" class="gallery-item gallery-item-mirroring bento-content-width grid" data-ac-gallery-item="2">
+							<div class="gallery-item gallery-item-mirroring bento-content-width grid" data-ac-gallery-item="2">
 								<div class="card tile tile-rounded card-large">
-									<picture class="overview-mac-iphone-mirroring-1">
-										<source media="(max-width: 734px)" srcset="" />
-										<source media="(max-width: 1068px)" srcset="" />
-										<img src="" />
+									<picture class="overview-mac-phone-airdrop">
+										<source media="(max-width: 734px)" srcset="src/imgs/mac_iphone_airdrop_small.jpg" />
+										<source media="(max-width: 1068px)" srcset="src/imgs/mac_iphone_airdrop_medium.jpg" />
+										<source media="(min-width: 0px)" srcset="src/imgs/mac_iphone_airdrop_large.jpg" />
+										<img src="src/imgs/mac_iphone_airdrop_large.jpg" />
 									</picture>
 								</div>
 							</div>
@@ -1099,7 +1121,7 @@
 					<div class="viewport-content accessories-intro">
 						<div class="section-ps-headline-container large-7 medium-8 small-12 large-centered">
 							<h2 class="section-ps-eyebrow typography-ps-eyebrow">액세서리</h2>
-							<p class="section-ps-intro typography-ps-headline-super">
+							<p class="section-ps-headline typography-ps-headline-super">
 								<strong>연결은 바로.</strong>
 								구성은 맘대로.
 							</p>
@@ -1121,9 +1143,10 @@
 					</div>
 					<!-- intro -->
 					<picture class="overview-accessories-accessories">
-						<source media="(max-width: 734px)" srcset="" />
-						<source media="(max-width: 1068px)" srcset="" />
-						<img src="" />
+						<source media="(max-width: 734px)" srcset="src/imgs/accessories_small.jpg" />
+						<source media="(max-width: 1068px)" srcset="src/imgs/accessories_medium.jpg" />
+						<source media="(min-width: 0px)" srcset="src/imgs/accessories_large.jpg" />
+						<img src="src/imgs/accessories_large.jpg" />
 					</picture>
 					<!-- overview -->
 				</section>
@@ -1141,7 +1164,7 @@
 								</label>
 								<div class="form-tooltip form-tooltip-after">
 									<button class="form-tooltip-button">
-										<span class="form-icons form-icon-info"></span>
+										<span class="form-icons form-icons-info"></span>
 									</button>
 									<div id="form-tooltip-gallery" class="form-tooltip-info form-tooltip-pointer-middle" role="tooltip">
 										<p class="form-tooltip-title">갖고 있는 모델이 뭔지 확실치 않나요?</p>

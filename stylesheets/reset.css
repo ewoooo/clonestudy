@@ -193,4 +193,16 @@
 		line-height: 27px;
 		font-weight: 400;
 	}
+
+	button {
+		background: none;
+		border: 0;
+		box-sizing: initial;
+		color: inherit;
+		cursor: pointer;
+		font: inherit;
+		line-height: inherit;
+		overflow: visible;
+		vertical-align: inherit;
+	}
 }
