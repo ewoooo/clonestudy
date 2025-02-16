@@ -1401,7 +1401,7 @@
 	overflow: hidden;
 
 	.overview-accessories-accessories {
-		--p-wdith: 1933px;
+		--p-width: 1933px;
 		--p-height: 1024px;
 		order: -1;
 	}
@@ -1428,6 +1428,10 @@
 		text-align: center;
 	}
 
+	/* .viewport-content {
+		width: 980px;
+	} */
+
 	.upgraders-content {
 		margin-top: 50px;
 
@@ -1442,7 +1446,6 @@
 			}
 
 			.form-tooltip {
-				top: 0;
 				position: relative;
 				height: 1.1rem;
 				display: inline-block;
@@ -1469,11 +1472,13 @@
 				line-height: 1.4;
 				background-color: #e8e8ed;
 				font-size: 14px;
-				width: 14rem;
+				width: 15rem;
 				border-radius: 12px;
 				padding: 0.7rem 1rem 0.77rem;
 				z-index: 1;
-				bottom: 1.8rem;
+				bottom: 2.3rem;
+				/* display: none; */
+				position: absolute;
 
 				&::after {
 					position: absolute;
@@ -1481,18 +1486,244 @@
 					width: 0.9rem;
 					height: 0.9rem;
 					border-bottom-right-radius: 2px;
-					transform: rotate(45deg);
+
 					bottom: -0.2rem;
+					background-color: #e8e8ed;
+				}
+
+				.form-tooltip-title {
+					font-weight: 600;
+				}
+
+				.form-tooltip-content {
+					margin-top: 6px;
 				}
 			}
+
 			.form-tooltip-pointer-middle {
-				/* inset-inline-start: -6.53rem; */
+				inset-inline-start: -6.53rem;
 
 				&::after {
-					inset-inline-end: 6.5882352941rem;
+					left: 50%;
+					bottom: -0.45rem;
+					transform: translateX(-50%) rotate(45deg);
 				}
 			}
 		}
+
+		.upgraders-gallery {
+			position: relative;
+			margin-top: 20px;
+
+			.dropdown {
+				margin-bottom: 64px;
+				box-sizing: border-box;
+			}
+
+			.form-dropdown-wrap {
+				display: flex;
+				justify-content: center;
+			}
+
+			.form-dropdown {
+				min-width: 264px;
+				position: relative;
+
+				.form-dropdown-select {
+					height: 42px;
+					padding-inline: 22px 42px;
+					border-width: 1px;
+					border-radius: 10rem;
+					background-color: rgb(255, 255, 255);
+					color: #1d1d1f;
+					line-height: 1.28;
+					cursor: pointer;
+					appearance: none;
+				}
+
+				.form-dropdown-chevron {
+					position: absolute;
+					top: 50%;
+					inset-inline-end: 14px;
+					transform: translateY(-50%);
+
+					&::after {
+						content: "";
+						font-size: 20px;
+						line-height: 1.17;
+						font-weight: 600;
+						display: inline-block;
+					}
+				}
+			}
+
+			.upgraders-gallery-subheader {
+				font-size: 24px;
+				font-weight: 600;
+				text-align: center;
+				margin-bottom: 40px;
+			}
+
+			.item-container {
+				height: 630px;
+				width: 100%;
+				margin-top: 40px;
+				position: relative;
+			}
+
+			.gallery-item {
+				position: absolute;
+				height: auto;
+				inset: 0;
+				margin: 0;
+				overflow: hidden;
+				background-color: #fff;
+			}
+
+			.bento-grid {
+				display: grid;
+				gap: 20px;
+				grid-template-areas:
+					"bento-1 bento-3"
+					"bento-1 bento-4"
+					"bento-2 bento-4";
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				min-width: 200px;
+
+				.bento-item {
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					overflow: hidden;
+					border-radius: 28px;
+					padding: 40px;
+					z-index: 1;
+					margin: 0;
+					background-color: #fff;
+					transition: opacity 400ms ease;
+
+					&.size {
+						background-color: #f8f2ec;
+						position: relative;
+					}
+
+					.copy-wrapper {
+						margin-top: 21px;
+
+						.bento-copy-reduced {
+							line-height: 1.25;
+							font-size: 28px;
+							font-weight: 600;
+						}
+					}
+
+					.bento-item-image-wrapper {
+						display: flex;
+						justify-content: center;
+					}
+
+					&:nth-child(1) {
+						grid-area: bento-1;
+						min-height: 380px;
+					}
+					&:nth-child(2) {
+						grid-area: bento-2;
+						min-height: 230px;
+
+						.copy-wrapper {
+							margin: 0;
+							z-index: 1;
+						}
+
+						.image-wrapper {
+							margin-inline-end: 20px;
+						}
+
+						&.graphics {
+							background-color: #dad3dd;
+						}
+					}
+					&:nth-child(3) {
+						grid-area: bento-3;
+						min-height: 230px;
+						background-color: #cfd8e3;
+
+						.copy-wrapper {
+							margin: 0;
+							z-index: 1;
+						}
+
+						.image-wrapper {
+							margin-inline-end: 20px;
+						}
+					}
+					&:nth-child(4) {
+						grid-area: bento-4;
+						/* min-height: 380px; */
+						background-image: url(../src/imgs/upgraders_intel_2_large.jpg);
+						background-size: 480px 380px;
+						color: #f5f5f7;
+						justify-content: flex-end;
+
+						.bento-item-image-wrapper {
+							justify-content: flex-start;
+						}
+
+						img {
+							width: var(--p-width);
+							height: var(--p-height);
+							--p-width: 59px;
+							--p-height: 106px;
+						}
+					}
+				}
+				.bento-item-inline {
+					display: flex;
+					align-items: center;
+					gap: 6px;
+				}
+			}
+		}
+	}
+
+	.apple-intelligence-glow {
+		--igradient: linear-gradient(100deg, #00d0ff, #09f 20%, #c95eff 42%, #ff2569 63%, #ff8300 83%, #ffb000);
+		position: absolute;
+		inset: 0;
+		border: 0;
+		z-index: 0;
+		filter: blur(9px);
+		opacity: 0.6;
+
+		&::after {
+			--bg-size: calc(100% + 14px);
+			border: 8px solid transparent;
+			pointer-events: none;
+			content: "";
+			position: absolute;
+			inset: 0;
+			z-index: 0;
+			background: var(--igradient) 50% / var(--bg-size) var(--bg-size);
+			mask: linear-gradient(hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0)), linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 100%));
+			mask-clip: padding-box, border-box;
+			mask-composite: intersect;
+		}
+	}
+
+	.overview-upgraders-gallery-intel {
+		--p-width: 321px;
+		--p-height: 187px;
+
+		width: var(--p-width);
+		height: var(--p-height);
+	}
+
+	.overview-upgraders-gallery-icon-gaming {
+		display: block;
+		width: var(--p-width);
+		height: var(--p-height);
+		--p-width: 90px;
+		--p-height: 106px;
 	}
 
 	@layer upgraders-typography {
@@ -1509,6 +1740,20 @@
 			font-weight: 600;
 			letter-spacing: 0.011em;
 		}
+	}
+
+	.bento-item[data-target="true"] {
+		opacity: 0;
+		z-index: 0;
+	}
+
+	.current {
+		z-index: 5;
+	}
+
+	.current .bento-item[data-target="true"] {
+		opacity: 1 !important;
+		z-index: 1;
 	}
 }
 

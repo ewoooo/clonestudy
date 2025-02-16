@@ -310,10 +310,6 @@
 			margin-inline: auto;
 			padding-inline: var(--bento-inline-padding);
 		}
-
-		.viewport-content {
-			width: 980px;
-		}
 	}
 
 	@layer inline {
@@ -751,5 +747,15 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+}
+
+@layer align {
+	.justify-content-center {
+		justify-content: center;
+	}
+
+	.text-align-center {
+		text-align: center;
 	}
 }

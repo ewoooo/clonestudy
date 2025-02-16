@@ -10,6 +10,7 @@
 		<script src="scripts/observer.js" defer></script>
 		<script src="scripts/tabnav.js" defer></script>
 		<script src="scripts/videoEvent_legacy.js" defer></script>
+		<script src="scripts/select.js" defer></script>
 		<title>Apple | Mac Mini</title>
 	</head>
 	<body>
@@ -1172,13 +1173,13 @@
 									</div>
 								</div>
 							</div>
-							<div id="upgraders-gallery">
-								<div id="dropdown" data-compare-gallery class="dropdown upgraders-dropdown large-12">
+							<div id="upgraders-gallery" class="upgraders-gallery">
+								<div id="dropdown" class="dropdown upgraders-dropdown large-12">
 									<div class="form-dropdown-wrap">
 										<div class="form-dropdown">
-											<select name="upgraders-select" id="upgraders-select">
-												<option id="intel-18" value="Mac mini (Intel, 2018)">Mac mini(Intel, 2018년 모델)</option>
-												<option id="m1-20" value="Mac mini (M1, 2020)">Mac mini(M1, 2020년 모델)</option>
+											<select name="upgraders-select" id="upgraders-select" class="form-dropdown-select typography-upgraders-copy-reduced">
+												<option id="intel-18" value="Mac mini (Intel, 2018)" data-label="intel">Mac mini(Intel, 2018년 모델)</option>
+												<option id="m1-20" value="Mac mini (M1, 2020)" data-label="m1">Mac mini(M1, 2020년 모델)</option>
 											</select>
 											<span class="form-dropdown-chevron"></span>
 										</div>
@@ -1188,34 +1189,36 @@
 								<!-- dropdown -->
 								<p class="upgraders-gallery-subheader typography-upgraders-copy">새로운 Mac mini는 어떤 점이 다를까요?</p>
 								<div class="item-container" style="height: 630px">
-									<ul id="intel-18-gallery-item">
+									<ul id="intel-18-gallery-item" class="bento-grid gallery-item large-centered large-12 current">
 										<li class="bento-item tile-rounded size justify-content-center" role="listitem">
 											<div class="bento-item-content-wrapper text-align-center">
 												<div class="image-wrapper">
 													<div class="bento-item-image-wrapper">
-														<picture id="overview-upgraders-gallery-intel-1-1" class="overview-upgraders-gallery-intel">
-															<source media="(max-width: 734px)" srcset="" />
-															<source media="(max-width: 1068px)" srcset="" />
-															<img src="" />
+														<picture class="overview-upgraders-gallery-intel">
+															<source media="(max-width: 734px)" srcset="src/imgs/upgraders_intel_1_small.png" />
+															<source media="(max-width: 1068px)" srcset="src/imgs/upgraders_intel_1_medium.png" />
+															<source media="(min-width: 0px)" srcset="src/imgs/upgraders_intel_1_large.png" />
+															<img src="src/imgs/upgraders_intel_1_large.png" />
 														</picture>
 													</div>
 												</div>
 												<div class="copy-wrapper">
-													<div class="bento-copy-reduced">이전 세대 대비 절반도 안 되는 면적을 차지하는 디자인.</div>
+													<div class="bento-copy-reduced text-align-center">이전 세대 대비 절반도 안 되는 면적을 차지하는 디자인.</div>
 												</div>
 											</div>
 										</li>
 										<!-- bento -->
-										<li class="bento-item tile-rounded size justify-content-center" role="listitem">
+										<li class="bento-item tile-rounded justify-content-center" role="listitem" data-target="true">
 											<div class="apple-intelligence-glow"></div>
 											<div class="apple-intelligence-glow apple-intelligence-glow-2"></div>
 											<div class="bento-item-inline">
 												<div class="image-wrapper">
 													<div class="bento-item-image-wrapper">
 														<picture id="overview-upgraders-gallery-icon-apple-intelligence-1" class="overview-upgraders-gallery-icon-apple-intelligence">
-															<source media="(max-width: 734px)" srcset="" />
-															<source media="(max-width: 1068px)" srcset="" />
-															<img src="" />
+															<source media="(max-width: 734px)" srcset="src/imgs/icon_apple_intelligence_small.png" />
+															<source media="(max-width: 1068px)" srcset="src/imgs/icon_apple_intelligence_medium.png" />
+															<source media="(min-width: 0px)" srcset="src/imgs/icon_apple_intelligence_large.png" />
+															<img src="src/imgs/icon_apple_intelligence_large.png" />
 														</picture>
 													</div>
 												</div>
@@ -1230,9 +1233,10 @@
 												<div class="image-wrapper">
 													<div class="bento-item-image-wrapper">
 														<picture id="overview-upgraders-gallery-icon-ports-1" class="overview-upgraders-gallery-icon-ports bento-item-image">
-															<source media="(max-width: 734px)" srcset="" />
-															<source media="(max-width: 1068px)" srcset="" />
-															<img src="" />
+															<source media="(max-width: 734px)" srcset="src/imgs/icon_ports_small.png" />
+															<source media="(max-width: 1068px)" srcset="src/imgs/icon_ports_medium.png" />
+															<source media="(min-width: 0px)" srcset="src/imgs/icon_ports_large.png" />
+															<img src="src/imgs/icon_ports_large.png" />
 														</picture>
 													</div>
 												</div>
@@ -1245,14 +1249,15 @@
 											</div>
 										</li>
 										<!-- bento -->
-										<li class="bento-item tile-rounded size justify-content-end" role="listitem">
+										<li class="bento-item tile-rounded size justify-content-end" role="listitem" data-target="true">
 											<div class="bento-item-content-wrapper text-align-start">
 												<div class="image-wrapper">
 													<div class="bento-item-image-wrapper">
 														<picture id="overview-upgraders-gallery-icon-bolt-1" class="overview-upgraders-gallery-icon-bolt bento-item-image">
-															<source media="(max-width: 734px)" srcset="" />
-															<source media="(max-width: 1068px)" srcset="" />
-															<img src="" />
+															<source media="(max-width: 734px)" srcset="src/imgs/icon_bolt_small.png" />
+															<source media="(max-width: 1068px)" srcset="src/imgs/icon_bolt_medium.png" />
+															<source media="(min-width: 0px)" srcset="src/imgs/icon_bolt_medium.png" />
+															<img src="src/imgs/icon_bolt_medium.png" />
 														</picture>
 													</div>
 												</div>
@@ -1267,32 +1272,33 @@
 										<!-- bento -->
 									</ul>
 									<!-- c/ bento -->
-									<ul id="m1-20-gallery-item">
+									<ul id="m1-20-gallery-item" class="bento-grid gallery-item large-centered large-12">
 										<li class="bento-item tile-rounded size justify-content-center" role="listitem">
 											<div class="bento-item-content-wrapper text-align-center">
 												<div class="image-wrapper">
 													<div class="bento-item-image-wrapper">
-														<picture id="overview-upgraders-gallery-intel-1-1" class="overview-upgraders-gallery-intel">
-															<source media="(max-width: 734px)" srcset="" />
-															<source media="(max-width: 1068px)" srcset="" />
-															<img src="" />
+														<picture class="overview-upgraders-gallery-intel">
+															<source media="(max-width: 734px)" srcset="src/imgs/upgraders_intel_1_small.png" />
+															<source media="(max-width: 1068px)" srcset="src/imgs/upgraders_intel_1_medium.png" />
+															<source media="(min-width: 0px)" srcset="src/imgs/upgraders_intel_1_large.png" />
+															<img src="src/imgs/upgraders_intel_1_large.png" />
 														</picture>
 													</div>
 												</div>
 												<div class="copy-wrapper">
-													<div class="bento-copy-reduced">이전 세대 대비 절반도 안 되는 면적을 차지하는 디자인.</div>
+													<div class="bento-copy-reduced text-align-center">이전 세대 대비 절반도 안 되는 면적을 차지하는 디자인.</div>
 												</div>
 											</div>
 										</li>
 										<!-- bento -->
-										<li class="bento-item tile-rounded graphics justify-content-center" role="listitem">
+										<li class="bento-item tile-rounded graphics justify-content-center" role="listitem" data-target="true">
 											<div class="bento-item-content-wrapper bento-item-inline">
 												<div class="image-wrapper">
 													<div class="bento-item-image-wrapper">
-														<picture id="overview-upgraders-gallery-icon-gaming-1" class="overview-upgraders-gallery-icon-gaming bento-item-image">
-															<source media="(max-width: 734px)" srcset="" />
-															<source media="(max-width: 1068px)" srcset="" />
-															<img src="" />
+														<picture class="overview-upgraders-gallery-icon-gaming bento-item-image">
+															<source media="(max-width: 734px)" srcset="src/imgs/icon_gaming_small.png" />
+															<source media="(max-width: 1068px)" srcset="src/imgs/icon_gaming_medium.png" />
+															<img src="src/imgs/icon_gaming_large.png" />
 														</picture>
 													</div>
 												</div>
@@ -1305,14 +1311,15 @@
 											</div>
 										</li>
 										<!-- bento -->
-										<li class="bento-item tile-rounded justify-content-center" role="listitem">
+										<li class="bento-item tile-rounded size justify-content-center" role="listitem">
 											<div class="bento-item-content-wrapper bento-item-inline text-align-start">
 												<div class="image-wrapper">
 													<div class="bento-item-image-wrapper">
-														<picture id="overview-upgraders-gallery-icon-ports-1" class="overview-upgraders-gallery-icon-ports bento-item-image">
-															<source media="(max-width: 734px)" srcset="" />
-															<source media="(max-width: 1068px)" srcset="" />
-															<img src="" />
+														<picture class="overview-upgraders-gallery-icon-ports bento-item-image">
+															<source media="(max-width: 734px)" srcset="src/imgs/icon_ports_small.png" />
+															<source media="(max-width: 1068px)" srcset="src/imgs/icon_ports_medium.png" />
+															<source media="(min-width: 0px)" srcset="src/imgs/icon_ports_large.png" />
+															<img src="src/imgs/icon_ports_large.png" />
 														</picture>
 													</div>
 												</div>
@@ -1325,14 +1332,15 @@
 											</div>
 										</li>
 										<!-- bento -->
-										<li class="bento-item tile-rounded justify-content-end" role="listitem">
+										<li class="bento-item tile-rounded justify-content-end" role="listitem" data-target="true">
 											<div class="bento-item-content-wrapper text-align-start">
 												<div class="image-wrapper">
 													<div class="bento-item-image-wrapper">
 														<picture id="overview-upgraders-gallery-icon-bolt-1" class="overview-upgraders-gallery-icon-bolt bento-item-image">
-															<source media="(max-width: 734px)" srcset="" />
-															<source media="(max-width: 1068px)" srcset="" />
-															<img src="" />
+															<source media="(max-width: 734px)" srcset="src/imgs/icon_bolt_small.png" />
+															<source media="(max-width: 1068px)" srcset="src/imgs/icon_bolt_medium.png" />
+															<source media="(min-width: 0px)" srcset="src/imgs/icon_bolt_medium.png" />
+															<img src="src/imgs/icon_bolt_medium.png" />
 														</picture>
 													</div>
 												</div>
