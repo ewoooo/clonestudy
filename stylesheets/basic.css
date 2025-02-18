@@ -86,6 +86,7 @@
 
 	.row {
 		display: flex;
+		flex-flow: row nowrap;
 		width: 100%;
 	}
 
@@ -694,7 +695,7 @@
 @layer fnd-flex {
 	.row {
 		display: flex;
-		flex-flow: row wrap;
+		flex-flow: row nowrap;
 		width: 100%;
 	}
 
@@ -707,7 +708,7 @@
 
 @layer fnd-anker {
 	a {
-		color: rgb(0, 102, 204);
+		/* color: rgb(0, 102, 204); */
 		letter-spacing: inherit;
 	}
 }
