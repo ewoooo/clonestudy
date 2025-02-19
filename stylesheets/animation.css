@@ -241,3 +241,9 @@
 		}
 	}
 }
+
+[data-animation-target*="1"],
+[data-animation-target*="2"],
+[data-animation-target*="3"] {
+	opacity: 0;
+}

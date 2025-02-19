@@ -9,9 +9,11 @@
 		<script src="scripts/slider.js" defer></script>
 		<script src="scripts/observer.js" defer></script>
 		<script src="scripts/tabnav.js" defer></script>
-		<script src="scripts/videoEvent_legacy.js" defer></script>
 		<script src="scripts/select.js" defer></script>
 		<script src="scripts/paddlenav.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+		<script src="scripts/videoEvent.js" defer></script>
 		<title>Apple | Mac Mini</title>
 	</head>
 	<body>
@@ -445,7 +447,7 @@
 										<h2 class="typography-ps-eyebrow">디자인</h2>
 										<p class="typography-ps-headline-super">작은 몸. <strong>큰 임팩트.</strong></p>
 									</div>
-									<div class="section-ps-intro typography-ps-intro screener animation-target">
+									<div class="section-ps-intro typography-ps-intro" data-animation-target="1">
 										<p>
 											훨씬 더 강력해지고 작아진, 완전히 새로운 Mac mini를 만나보세요. 가로세로 각각 12.7cm의 크기로 전하는 순수한 파워와 명확한 용도. Apple Silicon을 중심으로
 											디자인되었기 때문에 완벽하게 발휘되는 M4 및 M4 Pro 칩의 속도와 성능. 이제 뒷면은 물론 앞면에도 추가된 다양한 포트. 효율성이란 무엇인지 극명하게 보여주는 Mac
@@ -456,12 +458,12 @@
 								<!-- Headline -->
 								<div class="image-tout-container">
 									<div class="tout-fallback">
-										<div class="dimension-container animation-target">
+										<div class="dimension-container" data-animation-target="1">
 											<div class="dimension-width">12.7</div>
 											<div class="dimension-height">12.7</div>
 										</div>
 									</div>
-									<div class="tout-container animation-target">
+									<div class="tout-container" data-animation-target="1">
 										<div class="tout">
 											<p class="typography-ps-callout"><strong>1/20</strong>로 작은 크기</p>
 											<p class="typography-ps-callout">최대 <strong>6배</strong> 더 빠른 속도</p>
@@ -484,24 +486,24 @@
 					</div>
 					<!-- Hardware Container -->
 					<div class="port-sticky-container sticky-container">
-						<div class="sticky-element" data-video-play-query="play" data-video-scale-query="up">
+						<div class="sticky-element">
 							<div class="port-container">
-								<div class="flipbook" data-flipbook-index="1">
+								<div class="flipbook" data-animation-target="2">
 									<div class="flipbook-items">
 										<p class="flipbook-item typography-ps-flipbook">USB-C 2개</p>
 										<p class="flipbook-item typography-ps-flipbook">헤드폰 잭</p>
 									</div>
 								</div>
-								<p class="port-label typography-ps-port-label">전면 포트</p>
+								<p class="port-label typography-ps-port-label" data-animation-target="2">전면 포트</p>
 								<!-- flipbook -->
-								<div class="flipbook" data-flipbook-index="1">
-									<div class="flipbook-items">
+								<div class="flipbook" data-animation-target="3">
+									<div class="flipbook-items flipbook-item-back">
 										<p class="flipbook-item typography-ps-flipbook">HDML</p>
 										<p class="flipbook-item typography-ps-flipbook">이더넷</p>
 										<p class="flipbook-item typography-ps-flipbook">Thunderbolt 3개</p>
 									</div>
 								</div>
-								<p class="port-label typography-ps-port-label">후면 포트</p>
+								<p class="port-label typography-ps-port-label" data-animation-target="3">후면 포트</p>
 								<!-- flipbook -->
 							</div>
 						</div>
@@ -2095,7 +2097,7 @@
 				<nav class="ac-gf-breadcrumbs" role="navigation">
 					<a href="#" class="home ac-gf-breadcrumbs-home">
 						<span class="ac-gf-breadcrumbs-home-icon"></span>
-						<span class="ac-gf-breadcrumbs-home-label">Apple</span>
+						<span class="ac-gf-breadcrumbs-home-label visuallyhidden">Apple</span>
 					</a>
 					<div class="ac-gf-breadcrumbs-path">
 						<ol class="ac-gf-breadcrumbs-list">
